@@ -57,8 +57,8 @@ function inicializarSensores() {
         }
     });
     
-    // Inicializa o Sensor de Visão buscando as instruções E todos os blocos de campos
-    const blocosDeVisao = document.querySelectorAll(".instrucoes-servico, .campo");
+    // Inicializa o Sensor de Visão apenas em textos relevantes: instruções e labels dos campos.
+    const blocosDeVisao = document.querySelectorAll(".instrucoes-servico, .campo label");
     if (blocosDeVisao.length > 0 && typeof inicializarSensorVisao === "function") {
         inicializarSensorVisao(blocosDeVisao);
     } else {
