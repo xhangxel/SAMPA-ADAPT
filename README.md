@@ -1,7 +1,7 @@
-## PROJETO SAMPA-ADAPT PARA A 15ª EDIÇÃO DO PRÊMIO “AS MELHORES PRÁTICAS DE ESTÁGIO NA PREFEITURA DE SÃO PAULO” (2026)
-# Framework Digital Plural com Acessibilidade Comportamental Adaptativa Autônoma em Tempo Real via Telemetria Local
+# PROJETO SAMPA-ADAPT PARA A 15ª EDIÇÃO DO PRÊMIO “AS MELHORES PRÁTICAS DE ESTÁGIO NA PREFEITURA DE SÃO PAULO” (2026)
+## Framework Digital Plural com Acessibilidade Comportamental Adaptativa Autônoma em Tempo Real via Telemetria Local
 
-# ESTRUTURA PRINCIPAL DO SISTEMA
+## ESTRUTURA PRINCIPAL DO SISTEMA
 SAMPA-ADAPT/
 │
 ├── index.html               # Página principal (Simulação de um Formulário)
@@ -22,13 +22,13 @@ SAMPA-ADAPT/
 │
 └── README.md                # Documentação técnica rápida do projeto
 
-# Como Aplicar o SAMPA-ADAPT na prática?
+## Como Aplicar o SAMPA-ADAPT na prática?
 O SAMPA-ADAPT foi feito pensando na alta replicabilidade e baixo custo do Framework para que seja viável tanto 
 para um sistema legado quanto para um sistema mais moderno, de uma forma que ainda assim evite o retrabalho dos 
 Servidores da área de Desenvolvimento. Pensando nisso, criamos o Snippet de Integração para que com um único
 bloco de código possa haver a integração dessa funcionalidade.
 
-Snippet de Integração:
+### Snippet de Integração:
 
 ```html <!-- Estilização das adaptações dinâmicas -->
 <link rel="stylesheet" href="./styles/styles.css">
@@ -42,9 +42,10 @@ Snippet de Integração:
 <script src="./js/sensores/visao.js"></script>
 
 <!-- Maestro do Sistema -->
-<script src="./js/main.js"></script> ´´´
+<script src="./js/main.js"></script>
+```
 
-# Como o SAMPA-ADAPT se aplica dentro da estrutura da LGPD-Compliant?
+## Como o SAMPA-ADAPT se aplica dentro da estrutura da LGPD-Compliant?
 O SAMPA-ADAPT adota o conceito de Privacy by Design (Privacidade desde a Concepção). Por ser uma solução executada estritamente no lado
 do cliente (client-side), o perfil adaptativo é temporário e reside apenas na memória volátil da sessão do usuário. Isso elimina riscos
 de vazamento de dados, desonera a infraestrutura de servidores do município e garante conformidade absoluta com a LGPD sem necessidade de
