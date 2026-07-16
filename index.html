@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Atendimento Plural</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f6f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Barra de Identidade do Município */
+        .barra-governo {
+            width: 100%;
+            max-width: 750px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 0;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #002f6c;
+        }
+
+        .brasao-fake {
+            background: #002f6c;
+            color: #fff;
+            font-weight: bold;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        .barra-governo span {
+            font-size: 13px;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .container {
+            background: #fff;
+            width: 100%;
+            max-width: 750px;
+            padding: 35px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Seção informativa para testar sensores de Rolagem e Visão */
+        .instrucoes-servico {
+            background: #f8f9fa;
+            border-left: 4px solid #002f6c;
+            padding: 15px;
+            margin-bottom: 25px;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .instrucoes-servico h3 {
+            color: #002f6c;
+            font-size: 16px;
+            margin-bottom: 6px;
+        }
+
+        .instrucoes-servico p {
+            font-size: 13.5px;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        h2 {
+            text-align: left;
+            margin-bottom: 20px;
+            color: #111;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .campo {
+            margin-bottom: 18px;
+            transition: all 0.2s ease;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #444;
+            font-size: 14px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #b9c1ca;
+            border-radius: 6px;
+            font-size: 15px;
+            background: #fff;
+            color: #333;
+            transition: all 0.2s ease;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #0056b3;
+            box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.15);
+        }
+
+        .linha {
+            display: flex;
+            gap: 15px;
+        }
+
+        .linha .campo {
+            flex: 1;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background: #002f6c;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-top: 10px;
+            transition: all 0.2s ease;
+        }
+
+        button:hover {
+            background: #001f4d;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+        }
+
+        /* Responsividade para telas menores */
+        @media (max-width: 500px) {
+            .linha {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Identidade Institucional da Prefeitura -->
+<div class="barra-governo">
+    <div class="brasao-fake">MUNÍCIPE INFORMA</div>
+    <div><span>Portal de Atendimento Plural para o Munícipe</span></div>
+</div>
+
+<div class="container">
+    <h2>Formulário de Cadastro Simplificado do Munícipe</h2>
+
+    <div class="instrucoes-servico">
+        <h3>Instruções de Acessibilidade e Atendimento Plural</h3>
+        <p>Este formulário destina-se à validação cadastral de programas sociais integrados do município. Certifique-se de ter em mãos seus documentos pessoais. Seus dados estão protegidos localmente de acordo com as diretrizes de sigilo e governança digital vigentes.</p>
+    </div>
+
+    <form onsubmit="event.preventDefault(); alert('Cadastro enviado localmente com sucesso via SAMPA-ADAPT!');">
+
+        <div class="campo">
+            <label>Nome Completo</label>
+            <input type="text" name="nome" placeholder="Ex: Maria Silva de Oliveira">
+        </div>
+
+        <div class="linha">
+            <div class="campo">
+                <label>Idade</label>
+                <input type="number" name="idade" placeholder="Apenas números">
+            </div>
+
+            <div class="campo">
+                <label>Data de Nascimento</label>
+                <input type="date" name="dataNascimento">
+            </div>
+        </div>
+
+        <div class="linha">
+            <div class="campo">
+                <label>CPF</label>
+                <input type="text" name="cpf" placeholder="000.000.000-00">
+            </div>
+
+            <div class="campo">
+                <label>RG</label>
+                <input type="text" name="rg" placeholder="00.000.000-0">
+            </div>
+        </div>
+
+        <div class="linha">
+            <div class="campo">
+                <label>Telefone / Celular</label>
+                <input type="tel" name="telefone" placeholder="(11) 99999-9999">
+            </div>
+
+            <div class="campo">
+                <label>E-mail</label>
+                <input type="email" name="email" placeholder="nome@exemplo.com">
+            </div>
+        </div>
+
+        <div class="linha">
+            <div class="campo">
+                <label>Nacionalidade</label>
+                <input type="text" name="nacionalidade" placeholder="Ex: Brasileira">
+            </div>
+
+            <div class="campo">
+                <label>Naturalidade</label>
+                <input type="text" name="naturalidade" placeholder="Ex: São Paulo - SP">
+            </div>
+        </div>
+
+        <div class="campo">
+            <label>Endereço (Rua/Avenida)</label>
+            <input type="text" name="rua" placeholder="Nome do logradouro público">
+        </div>
+
+        <div class="linha">
+            <div class="campo">
+                <label>Número</label>
+                <input type="text" name="numero" placeholder="Ex: 123 ou S/N">
+            </div>
+
+            <div class="campo">
+                <label>Complemento</label>
+                <input type="text" name="complemento" placeholder="Apto, Bloco, Fundos (Opcional)">
+            </div>
+        </div>
+
+        <div class="linha">
+            <div class="campo">
+                <label>CEP</label>
+                <input type="text" name="cep" placeholder="00000-000">
+            </div>
+
+            <div class="campo">
+                <label>Bairro</label>
+                <input type="text" name="bairro" placeholder="Nome do bairro">
+            </div>
+        </div>
+
+        <button type="submit">Confirmar e Cadastrar</button>
+
+    </form>
+</div>
+
+<!-- Estilização das adaptações dinâmicas -->
+<link rel="stylesheet" href="./styles/styles.css">
+
+<!-- Módulos dos Sensores -->
+<script src="./js/sensores/hesitacao.js"></script>
+<script src="./js/sensores/frustracao.js"></script>
+<script src="./js/sensores/fadiga.js"></script>
+<script src="./js/sensores/rolagem.js"></script>
+<script src="./js/sensores/retorno.js"></script>
+<script src="./js/sensores/visao.js"></script>
+
+<!-- Maestro do Sistema -->
+<script src="./js/main.js"></script>
+
+
+
+</body>
+</html>
