@@ -2,7 +2,6 @@
 ## Framework Digital Plural com Acessibilidade Comportamental Adaptativa Autônoma em Tempo Real via Telemetria Local
 
 ## ESTRUTURA PRINCIPAL DO SISTEMA
-```text
 SAMPA-ADAPT/
 │
 ├── index.html               # Página principal (Simulação de um Formulário)
@@ -22,7 +21,6 @@ SAMPA-ADAPT/
 │       └── visao.js         # Gatilho 6: Monitora sensor do mouse parado em cima de um bloco informativo longo ou de uma label
 │
 └── README.md                # Documentação técnica rápida do projeto
-```
 
 ## Como Aplicar o SAMPA-ADAPT na prática?
 O SAMPA-ADAPT foi feito pensando na alta replicabilidade e baixo custo do Framework para que seja viável tanto 
