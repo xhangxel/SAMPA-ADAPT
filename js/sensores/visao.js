@@ -5,9 +5,13 @@ function inicializarSensorVisao(elementosAlvo) {
 
     // Varre todos os blocos (instruções e campos) adicionando o ouvinte
     elementosAlvo.forEach(bloco => {
+        // Ignora controles de formulário e elementos interativos — apenas ativa em blocos de texto
+        const tag = bloco.tagName ? bloco.tagName.toLowerCase() : '';
+        if (["input", "textarea", "select", "button", "a"].includes(tag)) return;
+        if (bloco.matches && bloco.matches('[contenteditable="true"]')) return;
+
         bloco.addEventListener("mouseenter", () => {
-            console.log("SAMPA-ADAPT (Telemetria): Foco visual detectado em um bloco. Aguardando 3 segundos...");
-            
+            console.log("SAMPA-ADAPT (Telemetria): Foco visual detectado em um bloco. Aguardando 10 segundos...");
             timerVisao = setTimeout(() => {
                 dispararMelhoriaVisibilidadeGlobal();
             }, 10000); // 10 segundos parado aciona a acessibilidade global
@@ -32,11 +36,6 @@ function dispararMelhoriaVisibilidadeGlobal() {
     const blocoInfo = document.querySelector(".instrucoes-servico");
     if (blocoInfo) blocoInfo.classList.add("adapt-leitura-ampliada");
 
-    // Aplica estilo de alto contraste também para todos os inputs ficarem visíveis no fundo preto
-    const inputs = document.querySelectorAll("input");
-    inputs.forEach(input => {
-        input.style.backgroundColor = "#222";
-        input.style.color = "#ffff00";
-        input.style.borderColor = "#ffff00";
-    });
+    // Não aplicamos estilos inline nos inputs; o CSS lida com o modo alto contraste quando
+    // `adapt-leitura-ampliada` estiver presente no formulário.
 }

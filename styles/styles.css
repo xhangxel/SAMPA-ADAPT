@@ -51,6 +51,41 @@ form.adapt-leitura-ampliada h3,
     letter-spacing: 0.8px;
 }
 
+/* Garante que o balão de ajuda adaptativo permaneça legível quando o modo de leitura ampliada estiver ativo */
+form.adapt-leitura-ampliada .adapt-tooltip,
+.instrucoes-servico.adapt-leitura-ampliada .adapt-tooltip {
+    background: #ffff00 !important;   
+    color: #000000 !important;      
+    border-left-color: #000000 !important;
+    box-shadow: none !important;
+}
+
+form.adapt-leitura-ampliada .adapt-tooltip .adapt-tooltip-texto,
+.instrucoes-servico.adapt-leitura-ampliada .adapt-tooltip .adapt-tooltip-texto {
+    color: #000000 !important;
+}
+
+form.adapt-leitura-ampliada .adapt-tooltip .adapt-tooltip-icone,
+.instrucoes-servico.adapt-leitura-ampliada .adapt-tooltip .adapt-tooltip-icone {
+    color: #000000 !important;
+}
+
+/* Placeholder e bordas dos inputs no modo alto contraste: mantém legibilidade do texto dentro dos inputs */
+form.adapt-leitura-ampliada input::placeholder {
+    color: #bfbfbf !important;
+}
+
+/* Inputs, textarea e selects no modo alto contraste */
+form.adapt-leitura-ampliada input,
+form.adapt-leitura-ampliada textarea,
+form.adapt-leitura-ampliada select {
+    background-color: #222 !important;
+    color: #ffff00 !important;
+    border-color: #ffff00 !important;
+}
+
+
+
 /* ----------------------------------------------------- ROLAGEM CSS ------------------------------------------------------------------- */
 /* Modo Assistido: Ativado pelo Sensor de Rolagem */
 .adapt-barra-progresso {
@@ -182,3 +217,4 @@ input.adapt-input-acessivel::before {
         transform: translateY(0);
     }
 }
+
