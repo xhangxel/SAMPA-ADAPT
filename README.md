@@ -17,7 +17,7 @@ SAMPA-ADAPT/
 │       ├── hesitacao.js     # Gatilho 1: Monitora tempo e ociosidade
 │       ├── frustracao.js    # Gatilho 2: Monitora uso repetido de Backspace/correções
 │       ├── fadiga.js        # Gatilho 3: Monitora cliques errados ao redor dos botões
-│       ├── rolagem.js       # Gatilho 4: Monitora rolagens repetidas e rápidas na página
+│       ├── rolagem.js       # Gatilho 4: Monitora rolagens repetidas e rápidas na página, e detecta campos em branco
 │       ├── retorno.js       # Gatilho 5: Monitora a saída da página e a volta
 │       └── visao.js         # Gatilho 6: Monitora sensor do mouse parado em cima de um bloco informativo longo ou de uma label
 │
