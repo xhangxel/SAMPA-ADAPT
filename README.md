@@ -32,19 +32,19 @@ bloco de código possa haver a integração dessa funcionalidade.
 
 ### Snippet de Integração:
 
-```html <!-- Estilização das adaptações dinâmicas -->
-<link rel="stylesheet" href="./styles/styles.css">
+```html     <!-- Estilização das adaptações dinâmicas -->
+    <link rel="stylesheet" href="./styles/styles.css">
 
-<!-- Módulos dos Sensores -->
-<script src="./js/sensores/hesitacao.js"></script>
-<script src="./js/sensores/frustracao.js"></script>
-<script src="./js/sensores/fadiga.js"></script>
-<script src="./js/sensores/rolagem.js"></script>
-<script src="./js/sensores/retorno.js"></script>
-<script src="./js/sensores/visao.js"></script>
+    <!-- Módulos dos Sensores -->
+    <script src="./js/sensores/hesitacao.js"></script>
+    <script src="./js/sensores/frustracao.js"></script>
+    <script src="./js/sensores/fadiga.js"></script>
+    <script src="./js/sensores/rolagem.js"></script>
+    <script src="./js/sensores/retorno.js"></script>
+    <script src="./js/sensores/visao.js"></script>
 
-<!-- Maestro do Sistema -->
-<script src="./js/main.js"></script>
+    <!-- Maestro do Sistema -->
+    <script src="./js/main.js"></script>
 ```
 
 ## Como o SAMPA-ADAPT se aplica dentro da estrutura da LGPD-Compliant?

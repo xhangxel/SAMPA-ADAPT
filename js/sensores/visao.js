@@ -24,6 +24,8 @@ function inicializarSensorVisao(elementosAlvo) {
 }
 
 function dispararMelhoriaVisibilidadeGlobal() {
+    if (!ConfiguracaoSensores.visao) return;
+    
     // Se o formulário já estiver em alto contraste, ignora
     const formulario = document.querySelector("form");
     if (formulario && formulario.classList.contains("adapt-leitura-ampliada")) return;
@@ -36,6 +38,5 @@ function dispararMelhoriaVisibilidadeGlobal() {
     const blocoInfo = document.querySelector(".instrucoes-servico");
     if (blocoInfo) blocoInfo.classList.add("adapt-leitura-ampliada");
 
-    // Não aplicamos estilos inline nos inputs; o CSS lida com o modo alto contraste quando
-    // `adapt-leitura-ampliada` estiver presente no formulário.
+
 }
