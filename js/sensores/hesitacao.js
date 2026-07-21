@@ -14,7 +14,7 @@ function iniciarMonitoramentoHesitacao(elemento) {
         if (document.activeElement === elemento && elemento.value.length === 0) {
             dispararAjudaHesitacao(elemento);
         }
-    }, 1000);
+    }, 10000);
 }
 
 function dispararAjudaHesitacao(elemento) {
