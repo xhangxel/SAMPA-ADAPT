@@ -9,21 +9,25 @@ SAMPA-ADAPT/
 │
 ├── vercel.json              # Configurações de implantação estática da Simulação do Formulário com o Framework
 |
-├── styles/
-│   └── styles.css           # Estilização da página e das adaptações de acessibilidade
-│
-├── js/
-│   ├── main.js              # Inicializador e gerenciador do Perfil Cognitivo Temporário
-│   │
-│   └── sensores/            # Pasta modular para cada sensor
-│       ├── hesitacao.js     # Gatilho 1: Monitora tempo e ociosidade
-│       ├── frustracao.js    # Gatilho 2: Monitora uso repetido de Backspace/correções
-│       ├── fadiga.js        # Gatilho 3: Monitora cliques errados ao redor dos botões
-│       ├── rolagem.js       # Gatilho 4: Monitora rolagens repetidas e rápidas na página
-│       ├── retorno.js       # Gatilho 5: Monitora a saída da página e a volta
-│       └── visao.js         # Gatilho 6: Monitora sensor do mouse parado em cima de um bloco informativo longo ou de uma label
-│
+├── SAMPA-ADAPT/
+│    |
+│    ├── styles/
+|    │   └── styles.css           # Estilização da página e das adaptações de acessibilidade
+|    │
+|    ├── js/
+|        ├── main.js              # Inicializador e gerenciador do Perfil Cognitivo Temporário
+|        ├── loader.js            # Cria um único script de uma linha para injetar todos os sensores com uma única linha
+|        │
+|        └── sensores/            # Pasta modular para cada sensor
+|            ├── hesitacao.js     # Gatilho 1: Monitora tempo e ociosidade
+|            ├── frustracao.js    # Gatilho 2: Monitora uso repetido de Backspace/correções
+|            ├── fadiga.js        # Gatilho 3: Monitora cliques errados ao redor dos botões
+|            ├── rolagem.js       # Gatilho 4: Monitora rolagens repetidas e rápidas na página
+|            ├── retorno.js       # Gatilho 5: Monitora a saída da página e a volta
+|            └── visao.js         # Gatilho 6: Monitora sensor do mouse parado em cima de um bloco informativo longo ou de uma label
+|    
 └── README.md                # Documentação técnica rápida do projeto
+
 ```
 
 ## Como Aplicar o SAMPA-ADAPT na prática?
@@ -35,19 +39,8 @@ bloco de código possa haver a integração dessa funcionalidade.
 ### Snippet de Integração:
 
 ```html     
-    <!-- Estilização das adaptações dinâmicas -->
-    <link rel="stylesheet" href="./styles/styles.css">
-
-    <!-- Módulos dos Sensores -->
-    <script src="./js/sensores/hesitacao.js"></script>
-    <script src="./js/sensores/frustracao.js"></script>
-    <script src="./js/sensores/fadiga.js"></script>
-    <script src="./js/sensores/rolagem.js"></script>
-    <script src="./js/sensores/retorno.js"></script>
-    <script src="./js/sensores/visao.js"></script>
-
-    <!-- Script Principal do Projeto -->
-    <script src="./js/main.js"></script>
+    <link rel="stylesheet" href="./SAMPA-ADAPT/styles/styles.css">
+    <script src="./SAMPA-ADAPT/js/loader.js"></script>
 ```
 
 ## Guia para futuros desenvolvedores: como usar o framework

@@ -1,0 +1,322 @@
+/* ----------------------------------------------------- RETORNO CSS ----------------------------------------------------------------- */
+/* Modo Assistido: Ativado pelo Sensor de Retorno */
+.adapt-alerta-retorno {
+    background: #e2f0d9;
+    border-left: 4px solid #385723;
+    color: #385723;
+    padding: 12px 16px;
+    border-radius: 4px;
+    font-size: 13.5px;
+    margin-bottom: 20px;
+    line-height: 1.4;
+    transition: opacity 0.4s ease;
+    animation: surgimentoSuave 0.3s ease;
+}
+
+/* ----------------------------------------------------- VISAO CSS ------------------------------------------------------------------- */
+/* Modo Assistido: Ativado pelo Sensor de Visão */
+.adapt-leitura-ampliada {
+    background: #000000 !important;
+    color: #ffff00 !important;
+    border-left-color: #ffff00 !important;
+    font-size: 16px !important;
+    letter-spacing: 0.8px;
+    /* Aumenta o espaço entre as letras para legibilidade */
+    transition: all 0.4s ease;
+}
+
+.adapt-leitura-ampliada h3 {
+    color: #ffff00 !important;
+}
+
+.adapt-leitura-ampliada p {
+    color: #ffff00 !important;
+}
+
+/* Otimização de leitura para Baixa Visão / Alto Contraste */
+form.adapt-leitura-ampliada,
+.instrucoes-servico.adapt-leitura-ampliada {
+    background: #000000 !important;
+    color: #ffff00 !important;
+    padding: 25px !important;
+    border: 3px solid #ffff00 !important;
+    border-radius: 8px;
+    transition: all 0.4s ease;
+}
+
+/* Garante que os textos de labels e títulos dentro do formulário afetados fiquem amarelos */
+form.adapt-leitura-ampliada label,
+form.adapt-leitura-ampliada h2,
+form.adapt-leitura-ampliada h3,
+.instrucoes-servico.adapt-leitura-ampliada h3,
+.instrucoes-servico.adapt-leitura-ampliada p {
+    color: #ffff00 !important;
+    letter-spacing: 0.8px;
+}
+
+/* Garante que o balão de ajuda adaptativo permaneça legível quando o modo de leitura ampliada estiver ativo */
+form.adapt-leitura-ampliada .adapt-tooltip,
+.instrucoes-servico.adapt-leitura-ampliada .adapt-tooltip {
+    background: #ffff00 !important;
+    color: #000000 !important;
+    border-left-color: #000000 !important;
+    box-shadow: none !important;
+}
+
+form.adapt-leitura-ampliada .adapt-tooltip .adapt-tooltip-texto,
+.instrucoes-servico.adapt-leitura-ampliada .adapt-tooltip .adapt-tooltip-texto {
+    color: #000000 !important;
+}
+
+form.adapt-leitura-ampliada .adapt-tooltip .adapt-tooltip-icone,
+.instrucoes-servico.adapt-leitura-ampliada .adapt-tooltip .adapt-tooltip-icone {
+    color: #000000 !important;
+}
+
+/* Placeholder e bordas dos inputs no modo alto contraste: mantém legibilidade do texto dentro dos inputs */
+form.adapt-leitura-ampliada input::placeholder {
+    color: #bfbfbf !important;
+}
+
+/* Inputs, textarea e selects no modo alto contraste */
+form.adapt-leitura-ampliada input,
+form.adapt-leitura-ampliada textarea,
+form.adapt-leitura-ampliada select {
+    background-color: #222 !important;
+    color: #ffff00 !important;
+    border-color: #ffff00 !important;
+}
+
+
+
+/* ----------------------------------------------------- ROLAGEM CSS ------------------------------------------------------------------- */
+/* Modo Assistido: Ativado pelo Sensor de Rolagem */
+.adapt-barra-progresso {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #002f6c;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10000;
+    animation: surgimentoSuave 0.4s ease;
+}
+
+/* ----------------------------------------------------- FADIGA CSS -------------------------------------------------------------------*/
+/* Modo Assistido: Ativado pelo Sensor de Fadiga */
+
+/* Sensor de Fadiga: Torna o botão sensível a cliques na área ao redor dele */
+button.adapt-botao-acessivel {
+    position: relative;
+    background: #3fb45a !important;
+    transition: background 0.3s ease;
+}
+
+/* Um escudo invisível de clique de 40px ao redor do botão */
+button.adapt-botao-acessivel::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    right: -40px;
+    bottom: -40px;
+    background: transparent;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+/* Expansão global do formulário para aumentar todos os campos ativada pelo Sensor de Fadiga */
+.adapt-layout-ampliado .linha {
+    gap: 25px;
+    transition: all 0.3s ease;
+}
+
+.adapt-layout-ampliado .campo {
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+}
+
+/* Faz o botão crescer fisicamente também, além de ganhar a área invisível */
+button.adapt-botao-acessivel {
+    padding: 18px !important;
+    font-size: 19px !important;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+}
+
+.adapt-layout-ampliado .campo {
+    position: relative;
+}
+
+/* Expande a área de clique invisível 15px acima e abaixo */
+input.adapt-input-acessivel::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 0;
+    right: 0;
+    bottom: -15px;
+    background: transparent;
+    cursor: text;
+    z-index: 10;
+}
+
+/* ---------------------------------------------------- FRUSTRAÇÃO CSS --------------------------------------------------------------*/
+/* Modo Assistido: Ativado pelo Sensor de Frustração */
+
+.adapt-modo-assistido {
+    border-color: #007bff !important;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5) !important;
+    font-size: 19px !important;
+    /* Aumenta a fonte para melhorar a legibilidade de quem está errando */
+    padding: 14px !important;
+    /* Aumenta a área de digitação */
+    background-color: #fafafa;
+    transition: all 0.3s ease;
+}
+
+/* ----------------------------------------------------- HESITAÇÃO CSS -------------------------------------------------------------------*/
+/* Modo Assistido: Ativado pelo Sensor de Hesitação */
+
+/* Destaque suave no campo em que o usuário hesitou */
+.adapt-campo-hesitado {
+    border-color: #ffc107 !important;
+    box-shadow: 0 0 5px rgba(255, 193, 7, 0.4);
+    transition: all 0.3s ease;
+}
+
+/* Estrutura do Balão de Ajuda Adaptativo */
+.adapt-tooltip {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    color: #856404;
+    padding: 10px 14px;
+    border-radius: 4px;
+    font-size: 13px;
+    margin-top: 6px;
+    line-height: 1.4;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    animation: surgimentoSuave 0.3s ease forwards;
+}
+
+.adapt-tooltip-icone {
+    font-size: 16px;
+}
+
+.adapt-tooltip-texto {
+    margin: 0;
+}
+
+@keyframes surgimentoSuave {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* DESATIVAR SENSORES BOTÃO FLUTUANTE -------------------------------------------------------------------------------------*/
+/* Painel flutuante de acessibilidade */
+.sampa-painel-container {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.sampa-painel-toggle {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: #002f6c;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 26px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.22);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.sampa-painel-toggle:hover {
+    transform: translateY(-2px);
+    background: #001f4d;
+}
+
+.sampa-painel-conteudo {
+    position: absolute;
+    bottom: 76px;
+    right: 0;
+    width: 320px;
+    max-width: calc(100vw - 48px);
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 18px;
+    box-shadow: 0 22px 50px rgba(0, 0, 0, 0.18);
+    opacity: 0;
+    transform: translateY(16px) scale(0.96);
+    pointer-events: none;
+    transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+.sampa-painel-container.aberto .sampa-painel-conteudo {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+.sampa-painel-conteudo h3 {
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+.sampa-painel-conteudo p {
+    margin-bottom: 12px;
+    color: #444;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.sampa-opcao {
+    margin-bottom: 10px;
+}
+
+.sampa-opcao:last-child {
+    margin-bottom: 0;
+}
+
+.sampa-opcao label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #2d2d2d;
+    line-height: 1.3;
+    cursor: pointer;
+}
+
+.sampa-opcao input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #002f6c;
+    cursor: pointer;
+}
+
