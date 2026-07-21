@@ -3,16 +3,18 @@ let timerHesitacao;
 function iniciarMonitoramentoHesitacao(elemento) {
     clearTimeout(timerHesitacao);
 
+    if (!elemento || typeof elemento.value === "undefined") return;
+
     // Se o campo já estiver preenchido, não precisa monitorar hesitação inicial
     if (elemento.value.length > 0) return;
 
-    // Define o tempo limite de hesitação 
+    // Define o tempo limite de hesitação
     timerHesitacao = setTimeout(() => {
         // Verifica se o usuário continua no mesmo campo e ele continua vazio
         if (document.activeElement === elemento && elemento.value.length === 0) {
             dispararAjudaHesitacao(elemento);
         }
-    }, 10000); 
+    }, 1000);
 }
 
 function dispararAjudaHesitacao(elemento) {

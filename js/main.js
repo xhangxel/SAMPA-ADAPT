@@ -146,6 +146,10 @@ function inicializarSensores() {
         if (event.target.tagName === "INPUT" || event.target.tagName === "TEXTAREA") {
             const input = event.target;
             PerfilCognitivoTemporario.retorno.ultimoCampoFocado = input.name || "Campo";
+
+            if (ConfiguracaoSensores.hesitacao && typeof iniciarMonitoramentoHesitacao === "function") {
+                iniciarMonitoramentoHesitacao(input);
+            }
         }
     });
 
