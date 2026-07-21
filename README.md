@@ -84,7 +84,34 @@ Os desenvolvedores podem adaptar o framework em três níveis:
 - Ajustando os seletores: caso o sistema já tenha uma estrutura diferente, é possível modificar os elementos alvo nos arquivos JavaScript.
 - Ajustando os estilos: os comportamentos visuais podem ser alterados no arquivo de CSS para combinar com a identidade visual do órgão.
 
-### 5. Controle dos sensores
+### 5. Como preencher dicas personalizadas no bloco do main
+As dicas exibidas pelo sensor de hesitação são definidas no objeto `dicas` dentro de `js/main.js`, na função `exibirTooltipAdaptativo(elemento)`. Para personalizar as mensagens, o desenvolvedor deve editar esse bloco diretamente.
+
+Exemplo:
+
+```javascript
+const dicas = {
+  nome: "Digite seu nome completo conforme consta no documento oficial.",
+  cpf: "Informe apenas os números do CPF.",
+  email: "Digite um e-mail válido, por exemplo: nome@empresa.com.br."
+};
+```
+
+Regras importantes:
+- A chave do objeto deve corresponder ao `name` do campo HTML.
+- Se o campo não estiver no dicionário, o framework exibirá uma mensagem padrão.
+- É possível adicionar novas chaves para novos campos do formulário.
+- As mensagens podem incluir HTML simples, como links, se necessário.
+
+Exemplo de campo HTML compatível:
+
+```html
+<input type="text" name="cpf" id="cpf" />
+```
+
+Assim, quando o usuário ficar em silêncio nesse campo, o framework exibirá a dica personalizada associada ao `name="cpf"`.
+
+### 6. Controle dos sensores
 Os sensores são ativados por padrão. Para desativar algum deles, o desenvolvedor pode utilizar o painel flutuante de controle disponibilizado pelo framework ou alterar as chaves de configuração salvas no `localStorage`.
 
 ### 6. Boas práticas recomendadas
