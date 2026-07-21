@@ -326,11 +326,17 @@ function exibirTooltipAdaptativo(elemento) {
 window.togglePainel = togglePainel;
 window.alternarSensor = alternarSensor;
 
-document.addEventListener("DOMContentLoaded", () => {
+function ativarSampaAdapt() {
     injetarEstilosPainelAssistido();
     injetarPainelAssistido();
     atualizarCheckboxesPainel();
     inicializarSensores();
     console.log("SAMPA-ADAPT: Ativado com sucesso. Interface e rastros injetados.");
-});
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", ativarSampaAdapt);
+} else {
+    ativarSampaAdapt();
+}
 

@@ -27,7 +27,6 @@ SAMPA-ADAPT/
 |            └── visao.js         # Gatilho 6: Monitora sensor do mouse parado em cima de um bloco informativo longo ou de uma label
 |    
 └── README.md                     # Documentação técnica rápida do projeto
-
 ```
 
 ## Como Aplicar o SAMPA-ADAPT na prática?
