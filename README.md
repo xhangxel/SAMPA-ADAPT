@@ -5,9 +5,9 @@
 ```text
 SAMPA-ADAPT/
 │
-├── index.html               # Página principal (Simulação de um Formulário)
+├── index.html                    # Página principal (Simulação de um Formulário)
 │
-├── vercel.json              # Configurações de implantação estática da Simulação do Formulário com o Framework
+├── vercel.json                   # Configurações de implantação estática da Simulação do Formulário com o Framework
 |
 ├── SAMPA-ADAPT/
 │    |
@@ -26,7 +26,7 @@ SAMPA-ADAPT/
 |            ├── retorno.js       # Gatilho 5: Monitora a saída da página e a volta
 |            └── visao.js         # Gatilho 6: Monitora sensor do mouse parado em cima de um bloco informativo longo ou de uma label
 |    
-└── README.md                # Documentação técnica rápida do projeto
+└── README.md                     # Documentação técnica rápida do projeto
 
 ```
 
