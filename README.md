@@ -14,7 +14,7 @@ SAMPA-ADAPT/
 │    ├── styles/
 |    │   └── styles.css           # Estilização da página e das adaptações de acessibilidade
 |    │
-|    ├── js/
+|    └── js/
 |        ├── main.js              # Inicializador e gerenciador do Perfil Cognitivo Temporário
 |        ├── loader.js            # Cria um único script de uma linha para injetar todos os sensores com uma única linha
 |        │
