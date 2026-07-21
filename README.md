@@ -9,7 +9,7 @@ SAMPA-ADAPT/
 │
 ├── vercel.json                   # Configurações de implantação estática da Simulação do Formulário com o Framework
 |
-├── SAMPA-ADAPT/
+├── SAMPA-ADAPT/                  # Framework de Acessibilidade
 │    |
 │    ├── styles/
 |    │   └── styles.css           # Estilização da página e das adaptações de acessibilidade
