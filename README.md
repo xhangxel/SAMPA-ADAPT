@@ -33,8 +33,8 @@ SAMPA-ADAPT/
 ## Como Aplicar o SAMPA-ADAPT na prática?
 O SAMPA-ADAPT foi feito pensando na alta replicabilidade e baixo custo do Framework para que seja viável tanto 
 para um sistema legado quanto para um sistema mais moderno, de uma forma que ainda assim evite o retrabalho dos 
-Servidores da área de Desenvolvimento. Pensando nisso, criamos o Snippet de Integração para que com um único
-bloco de código possa haver a integração dessa funcionalidade.
+Servidores da área de Desenvolvimento. Para usar o framework, basta baixar o pacote e colocar a pasta `SAMPA-ADAPT` 
+na raiz da aplicação onde ele será instalado. Em seguida, inclua o snippet abaixo na página que irá usar o framework.
 
 ### Snippet de Integração:
 
